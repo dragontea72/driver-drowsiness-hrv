@@ -121,7 +121,7 @@ This visualization shows the **Power Spectral Density (PSD)** of HRV, highlighti
 
 This plot shows how model accuracy improved over training epochs. Both training and validation accuracy increase steadily, which suggests the model learned useful patterns and generalized reasonably well.
 
-![Training and Validation Accuracy](assets/training validation accuracy.png)
+![Training and Validation Accuracy](assets/training and validation loss.png)
 
 ---
 
@@ -129,7 +129,7 @@ This plot shows how model accuracy improved over training epochs. Both training 
 
 This plot shows the decrease in loss across epochs. The downward trend in both training and validation loss indicates improved model performance during training, with only minor overfitting.
 
-![Training and Validation Loss](assets/training validation loss.png)
+![Training and Validation Loss](assets/training and validation loss.png)
 
 ---
 
