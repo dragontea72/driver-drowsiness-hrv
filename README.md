@@ -75,25 +75,7 @@ The pipeline contains five main stages:
     └── metadata.joblib
 ```
 
-## Quick start
 
-```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
-cd YOUR_REPOSITORY_NAME
-
-python -m venv .venv
-
-# Windows
-.venv\Scripts\activate
-
-# macOS/Linux
-source .venv/bin/activate
-
-pip install -r requirements.txt
-jupyter notebook driver_drowsiness_hrv_ann.ipynb
-```
-
-Place the research CSV data inside the `data/` directory before running the notebook.
 
 ## Labeling note
 
@@ -123,6 +105,40 @@ The original analysis was useful for developing the research pipeline. This port
 
 Because of these improvements, a new run is not expected to reproduce the published values exactly.
 
+## Results and Visualizations
+
+This section can be used in GitHub to clearly **show the output of the project**.
+
+### 1. Power Spectral Density of HRV
+
+This visualization shows the **Power Spectral Density (PSD)** of HRV, highlighting the **Low Frequency (LF)** band and **High Frequency (HF)** band. These frequency-domain components help describe autonomic nervous system activity and are important for drowsiness analysis.
+
+![Power Spectral Density of HRV](assets/power_spectral_density_hrv.png)
+
+---
+
+### 2. Training and Validation Accuracy
+
+This plot shows how model accuracy improved over training epochs. Both training and validation accuracy increase steadily, which suggests the model learned useful patterns and generalized reasonably well.
+
+![Training and Validation Accuracy](assets/training_validation_accuracy.png)
+
+---
+
+### 3. Training and Validation Loss
+
+This plot shows the decrease in loss across epochs. The downward trend in both training and validation loss indicates improved model performance during training, with only minor overfitting.
+
+![Training and Validation Loss](assets/training_validation_loss.png)
+
+---
+
+### 4. Model Performance Metrics
+
+This bar chart summarizes the final reported performance values of the ANN model.
+
+![Model Performance Metrics](assets/model_performance_metrics.png)
+
 ## Published results
 
 | Metric | Score |
@@ -134,6 +150,13 @@ Because of these improvements, a new run is not expected to reproduce the publis
 
 The study reports strong recognition of early drowsiness, while some confusion remains between Alert/Early Drowsiness and Early/Severe Drowsiness.
 
+### Interpretation of the output
+
+- The model achieved **high overall accuracy**, indicating strong classification performance on the reported dataset.
+- **Precision** shows that predicted drowsiness classes were mostly correct.
+- **Recall** shows the model captured most true drowsiness cases, although some misclassification remained.
+- **F1-score** indicates a balanced tradeoff between precision and recall.
+- The confusion matrix suggests the model was strongest at detecting **Early Drowsiness**, which is useful because early intervention can improve road safety.
 ## Potential extensions
 
 Future work can strengthen the project by using participant-wise cross-validation, larger and more balanced datasets, additional physiological signals, sequential models such as LSTM/GRU, and a real-time inference application.
