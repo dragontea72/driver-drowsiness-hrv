@@ -62,17 +62,13 @@ The pipeline contains five main stages:
 ```text
 .
 ├── driver_drowsiness_hrv_ann.ipynb
-├── README.md
-├── requirements.txt
-├── data/
-│   ├── pulse_rate_dataset.csv      # optional single combined dataset
-│   └── *.csv                       # or participant/session files
-└── artifacts/                      # created after training
-    ├── hrv_drowsiness_ann.keras
-    ├── imputer.joblib
-    ├── scaler.joblib
-    ├── label_encoder.joblib
-    └── metadata.joblib
+├── README.md                     
+└── assets/                      
+    ├── power spectral density of hrv.png
+    ├── training and validation loss.png
+    ├── training and validation accuracy.png
+    ├── model performance metrics
+    └── confusion metrix
 ```
 
 
