@@ -139,6 +139,12 @@ This bar chart summarizes the final reported performance of the ANN model.
 
 ![Model Performance Metrics](assets/model%20performance%20metrics.png)
 
+### 5. Confusion Matrix
+
+The confusion matrix shows the classification performance for the three driver states: **Alert**, **Early Drowsiness**, and **Severe Drowsiness**.
+
+![Confusion Matrix](assets/confusion%20matrix.png)
+
 ## Published results
 
 | Metric | Score |
